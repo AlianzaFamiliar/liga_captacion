@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+}
+
+body {
+
+    background-image: url(/Assets/FONDO-PÁGINA-azul.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.header {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00757F;
+    height: 100px;
+    color: white;
+
+}
+
+.main {
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer {
+
+    height: 100px;
+
+}
+
+
+
+.container__formulario {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 680px;
+    width: 400px;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid black;
+
+}
+
+.input__formulario {
+
+    max-height: 30px;
+    border-radius: 5px;
+    border: solid 1px;
+    padding: 5px;
+}
+
+.container__btn {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-logos-organismos{
+
+    display:inline-flex;
+    gap: 50px;
+    width: 100%;
+    background-color: #00757F;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+}
+
+.img-organismos {
+
+    display: inline-block;
+    text-align: center;
+   
+}
+
+#formulario_captacion {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 400px;
+    gap: 10px;
+
+}
+
+#btn-enviar {
+
+    margin-top: 20px;
+    width: 100px;
+    padding: 10px;
+
+}
+
+@media (max-width: 930px) {
+
+    .img-organismos {
+
+        height: 30px;
+
+    }
+
+    .container-logos-organismos{
+
+        gap: 20px;
+
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .img-organismos {
+
+        height: 25px;
+
+    }
+
+    .container-logos-organismos{
+
+        gap: 10px;
+
+    }
+
+    .container__formulario {
+
+        width: 300px;
+        padding: 40px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .input__formulario {
+
+        width: 92%;
+    }
+
+    #formulario_captacion {
+
+        width: 300px;
+        justify-content: left;   
+
+    }
+}
+
+@media (max-width: 550px) {
+
+    .img-organismos {
+
+        height: 20px;
+
+    }
+
+    .container-logos-organismos{
+
+        gap: 10px;
+
+    }
+
+    .container__formulario {
+
+        width: 240px;
+        padding: 40px;
+        justify-content: center;
+        align-items: center;
+
+    }
+}

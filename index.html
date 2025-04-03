@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es_mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="/Assets/FAVICON.svg">
+    <title>Registro </title>
+</head>
+<body>
+    
+    <header class="header">
+
+        <h1>Formulario Registro</h1>
+
+    </header>
+
+    <main class="main">
+
+        <div class="container__formulario">
+
+            <form action="" id="formulario_captacion">
+
+                <label for="nombre">Nombre</label>
+                <input type="text" class="input__formulario" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+    
+                <label for="correo">Correo Electronico</label>
+                <input type="text" class="input__formulario" name="correo" id="correo" placeholder="Ingrese su correo electrónico" required>
+    
+                <label for="curp">Curp</label>
+                <input type="text" class="input__formulario" name="curp" id="curp"placeholder = "Ingrese su curp"  required>
+    
+                <label for="telefono">Telefono Movil</label>
+                <input type="number" class="input__formulario" name="telefono" id="telefono" placeholder="Ingrese su numero de telefono" required>
+                
+                <label for="tipo__credito">Tipo de Crédito</label>
+                <select name="tipo__credito" class="input__formulario" id="tipo__credito" onchange="mostrarModalidad(this)">
+                    <option value="0" selected disabled>Seleccione una opción</option>
+                    <option value="2">Fovissste - adquisición</option>
+                    <option value="4">Fovissste - Construyes en terreno propio</option>
+                    <option value="5">Fovissste - Construyes Adquision Terreno + Construcción</option>
+                    <option value="3">INFONAVIT</option>
+                    <option value="6">BANCOS</option>
+                </select>
+                
+                <label for="modalidad">Modalidad</label>
+                <select name="modalidad" class="input__formulario" id="modalidad">
+    
+                </select>
+    
+                <label for="estado">Estado</label>
+                <select name="estado" class="input__formulario" id="estado" onchange="mostrarSucursales()">
+                    <option value="0" selected disabled>Seleccione una opción</option>
+                </select>
+
+                <label for="sucursal">Sucursal</label>
+                <select name="sucursal" class="input__formulario" id="sucursal">
+                    
+                </select>
+
+                <label for="modo__contacto">Medio por el cual se entero de nosotros</label>
+                <select name="modo__contacto" class="input__formulario" id="modo__contacto">
+                    <option value="0" selected disabled>Seleccione una opcion</option>
+                </select>
+                
+                <div class="container__btn">
+                    <button type="submit" id="btn-enviar">Enviar</button>
+                </div>
+
+                
+            </form>
+
+        </div>
+        
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="container-logos-organismos">
+
+            <img src="/Assets/fovissste_blanco-01.png" alt="Fovissste" class="img-organismos">
+            <img src="/Assets/infonavit_blanco-01.png" alt="Infonavit" class="img-organismos">
+            <img src="/Assets/bancario-01.png" alt="Credito Hipotecario" class="img-organismos">
+            <img src="/Assets/hipotecaria_blanco-01.png" alt="Asociación brokers" class="img-organismos">
+            <img src="/Assets/cnbv_blanco-01.png" alt="Comisión Nacional Bancaria" class="img-organismos">
+            <img src="/Assets/condusef-01.png" alt="Condusef" class="img-organismos">
+
+        </div>
+
+    </footer>
+
+    <script src="/creditos.js"></script>
+    <script src="/app.js"></script>
+    <script src="/enviarDatos.js"></script>
+
+</body>
+</html>
