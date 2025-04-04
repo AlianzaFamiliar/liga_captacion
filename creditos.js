@@ -1,7 +1,7 @@
 const creditos = {
 
     2: `
-
+        <option value="0" selected disabled>Seleccione una opción</option>
         <option value="credito Tradicional">Crédito Tradicional</option>
         <option value="credito Conyugal">Crédito Conyugal</option>
         <option value="credito Mancomunado">Crédito Mancomunado</option>
@@ -10,29 +10,29 @@ const creditos = {
 
     `,
     3: `
-    
+        <option value="0" selected disabled>Seleccione una opción</option>
         <option value="Credito Infonavit">Credito Infonavit</option>
         <option value="Apoyo infonavit">Apoyo infonavit</option>
         <option value="Unamos credito">Unamos credito</option>
     
     `,
     4: `
-
-    <option value="credito Tradicional construyes ctp">Crédito Tradicional</option>
-    <option value="credito Mancomunado contruyes ctp">Crédito Mancomunado</option>
-    <option value="credito Pensionados constryes ctp">Crédito Pensionados</option>    
+        <option value="0" selected disabled>Seleccione una opción</option>
+        <option value="credito Tradicional construyes ctp">Crédito Tradicional</option>
+        <option value="credito Mancomunado contruyes ctp">Crédito Mancomunado</option>
+        <option value="credito Pensionados constryes ctp">Crédito Pensionados</option>    
 
     `,
     5: `
-
-    <option value="credito Tradicional construyes atc">Crédito Tradicional</option>
-    <option value="credito Mancomunado construyes atc">Crédito Mancomunado</option>
-    <option value="credito Pensionados construyes atc">Crédito Pensionados</option>    
+        <option value="0" selected disabled>Seleccione una opción</option>
+        <option value="credito Tradicional construyes atc">Crédito Tradicional</option>
+        <option value="credito Mancomunado construyes atc">Crédito Mancomunado</option>
+        <option value="credito Pensionados construyes atc">Crédito Pensionados</option>    
 
     `,
 
     6: `
-    
+        <option value="0" selected disabled>Seleccione una opción</option>
         <option value="bancario Tradicional">Bancario Tradicional</option>
         <option value="Hipoteca Liquidez">Hipoteca Liquidez</option>
         <option value="Remodelacion Vivienda">Remodelacion vivienda</option>

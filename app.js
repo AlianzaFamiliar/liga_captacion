@@ -7,7 +7,6 @@ async function obtenerDatos(URL_API) {
     mostrarEstados(data.body);
     mostrarTiposContacto(data.body);
 
-    console.log(data.body)
     return (data.body)
 
 }
@@ -15,7 +14,6 @@ async function obtenerDatos(URL_API) {
 function mostrarEstados(body) {
 
     const estados = document.getElementById("estado");
-    console.log(body.estados)
 
     for (const estado of body.estados) {
         

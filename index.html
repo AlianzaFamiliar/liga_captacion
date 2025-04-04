@@ -11,7 +11,9 @@
     
     <header class="header">
 
+        <img src="/Assets/AFA logotipo-05.png" alt="Alianza Familiar Entidad Financiera" class="img__header">
         <h1>Formulario Registro</h1>
+        <img src="/Assets/fovissste_blanco-01.png" alt="Logo Fovissste" class="img__header">
 
     </header>
 
@@ -19,22 +21,27 @@
 
         <div class="container__formulario">
 
+            <div class="titulo__formulario">
+                <h2 id="titulo__formulario">Alianza Familiar Entidad Financiera</h2>
+            </div>
+            
+
             <form action="" id="formulario_captacion">
 
-                <label for="nombre">Nombre</label>
-                <input type="text" class="input__formulario" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" class="input__formulario" name="nombre" id="nombre" placeholder="Ingrese su nombre" oninput="this.value = this.value.toUpperCase()" required>
     
-                <label for="correo">Correo Electronico</label>
-                <input type="text" class="input__formulario" name="correo" id="correo" placeholder="Ingrese su correo electrónico" required>
+                <label for="correo">Correo Electrónico</label>
+                <input type="text" class="input__formulario" name="correo" id="correo" placeholder="Ingrese su correo electrónico" oninput="this.value = this.value.toLowerCase()" required>
     
                 <label for="curp">Curp</label>
-                <input type="text" class="input__formulario" name="curp" id="curp"placeholder = "Ingrese su curp"  required>
+                <input type="text" class="input__formulario" name="curp" id="curp"placeholder = "Ingrese su curp" oninput="this.value = this.value.toUpperCase()" required>
     
-                <label for="telefono">Telefono Movil</label>
-                <input type="number" class="input__formulario" name="telefono" id="telefono" placeholder="Ingrese su numero de telefono" required>
+                <label for="telefono">Teléfono Móvil</label>
+                <input type="number" class="input__formulario" name="telefono" id="telefono" placeholder="Ingrese su número de teléfono" required>
                 
                 <label for="tipo__credito">Tipo de Crédito</label>
-                <select name="tipo__credito" class="input__formulario" id="tipo__credito" onchange="mostrarModalidad(this)">
+                <select name="tipo__credito" class="input__formulario" id="tipo__credito" onchange="mostrarModalidad(this); mostrarSucursales();">
                     <option value="0" selected disabled>Seleccione una opción</option>
                     <option value="2">Fovissste - adquisición</option>
                     <option value="4">Fovissste - Construyes en terreno propio</option>
@@ -45,7 +52,7 @@
                 
                 <label for="modalidad">Modalidad</label>
                 <select name="modalidad" class="input__formulario" id="modalidad">
-    
+                    <option value="0" selected disabled>Seleccione una opción</option>
                 </select>
     
                 <label for="estado">Estado</label>
@@ -55,14 +62,19 @@
 
                 <label for="sucursal">Sucursal</label>
                 <select name="sucursal" class="input__formulario" id="sucursal">
-                    
+                    <option value="0" selected disabled>Seleccione una opción</option>
                 </select>
 
-                <label for="modo__contacto">Medio por el cual se entero de nosotros</label>
+                <label for="modo__contacto">¿Por qué medio se enteró de nosotros?</label>
                 <select name="modo__contacto" class="input__formulario" id="modo__contacto">
-                    <option value="0" selected disabled>Seleccione una opcion</option>
+                    <option value="0" selected disabled>Seleccione una opción</option>
                 </select>
                 
+                <div>
+                    <input type="checkbox" name="confirma-respuesta" required>
+                    <label for="confirma-respuesta">Acepto los <a href="https://registro.alianzafamiliar.mx/terminosCondiciones.html" target="_blank">términos y condiciones</a> de la política de protección de datos.</label>
+                </div>
+
                 <div class="container__btn">
                     <button type="submit" id="btn-enviar">Enviar</button>
                 </div>

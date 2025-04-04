@@ -67,16 +67,23 @@ async function enviarDatos (datosCorreo,datosApi, URL_API) {
         });
 
         const responseJson = await response.json(); // Convertir la respuesta a JSON
-        console.log(responseJson)
+        
         if (responseJson.statusCode == 200){
 
             alert(responseJson.body)
+            btnEnviar = document.getElementById("btn-enviar");
+            btnEnviar.disabled = false;
         } else {
 
             alert(responseJson.body)
+            btnEnviar = document.getElementById("btn-enviar");
+            btnEnviar.disabled = false;
+            
         }
     } catch (error) {
         console.error('Error:', error);
+        btnEnviar = document.getElementById("btn-enviar");
+        btnEnviar.disabled = false;
     }
 }
 
@@ -87,16 +94,85 @@ formCaptacion.addEventListener("submit", function (e) {
     btnEnviar.disabled = true;
     e.preventDefault();
     datosObtenidos = obtenerDatosFormulario();
-    enviarDatos(datosObtenidos[0], datosObtenidos[1], URL_API_POST);
+    if (validarDatos(datosObtenidos[1])) {
+
+        enviarDatos(datosObtenidos[0], datosObtenidos[1], URL_API_POST);
+        setTimeout(() => {
+            limpiarDatos();
+        }, 1000); // 1000 ms = 1 segundo
+    } else {
+
+        btnEnviar.disabled = false;
+
+    }
+    
+    
 
 });
 
+function validarDatos(datosApi) {
+
+    if (datosApi.tipoCredito == 0) {
+        alert("Seleccione un tipo de crédito");
+        return false
+    } else if (datosApi.modalidad == 0) {
+
+        alert("Seleccione una modalidad")
+        return false
+    } else if (datosApi.estado == 0) {
+
+        alert("Seleccione un estado")
+        return false
+
+    } else if (datosApi.sucursal == 0) {
+
+        alert ("Seleccione una sucursal");
+        return false
+    } else if (datosApi.modoContacto == 0){
+
+        alert("Seleccione el medio por el cual se enteró")
+        return false
+    }
+
+    return true
+
+}
+
+function limpiarDatos() {
+
+    const nombre = document.getElementById("nombre");
+    nombre.value = "";
+
+    const correo = document.getElementById("correo");
+    correo.value = "";
+
+    const curp = document.getElementById("curp");
+    curp.value = "";
+
+    const telefono = document.getElementById("telefono");
+    telefono.value = "";
+
+    const tipoCredito = document.getElementById("tipo__credito");
+    tipoCredito.value = "0";
+
+    const modalidad = document.getElementById("modalidad");
+    modalidad.value = "0";
+
+    const estado = document.getElementById("estado");
+    estado.value = "0";
+
+    const sucursal = document.getElementById("sucursal");
+    sucursal.value = "0";
+
+    const modoContacto = document.getElementById("modo__contacto");
+    modoContacto.value = "0";
+
+}
+
 function determinarEmailSucursal(sucursalSigo) {
 
-
-
     for (const sucursal of window.DATOS_API.sucursales) {
-        console.log(sucursal);
+
         if (sucursal.SucursalId == sucursalSigo) {
 
             return sucursal.Email;
@@ -114,7 +190,7 @@ function determinarEmailSucursal(sucursalSigo) {
 function determinarSucursal(sucursalSigo) {
 
     for (const sucursal of window.DATOS_API.sucursales) {
-        console.log(sucursal);
+
         if (sucursal.SucursalId == sucursalSigo) {
 
             return sucursal.sucursal;
