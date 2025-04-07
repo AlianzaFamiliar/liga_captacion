@@ -28,6 +28,13 @@ body {
 
 }
 
+.img__header__formulario {
+
+    display: inline-block;
+    height: 50px;
+
+}
+
 .img__header {
 
     height: 50px;
@@ -59,12 +66,13 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 765px;
+    height: 860px;
     width: 400px;
     justify-content: center;
     padding: 40px;
     border-radius: 20px;
     border: 1px solid black;
+    gap: 20px;
 
 }
 

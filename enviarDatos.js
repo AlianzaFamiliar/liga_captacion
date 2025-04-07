@@ -32,7 +32,7 @@ function obtenerDatosFormulario() {
         emailSucursal: emailSucursal,
         modoContacto: modoContacto
     }
-
+    
     const datosApi = {
 
         nombre: nombre,
