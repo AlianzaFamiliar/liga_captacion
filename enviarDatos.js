@@ -171,6 +171,23 @@ function limpiarDatos() {
 
 function determinarEmailSucursal(sucursalSigo) {
 
+    const creditoSeleccionado = document.getElementById("tipo__credito").value;
+
+    if (creditoSeleccionado == 3 || creditoSeleccionado == 6) {
+
+        return "hipotecariob@alianzafamiliar.mx"
+
+    } else if (creditoSeleccionado == 4 || creditoSeleccionado == 5) {
+
+        return "construyes@alianzafamiliar.mx"
+    }
+
+    if (sucursalSigo == 54){
+
+        return "sfernandez@alianzafamiliar.mx"
+
+    }
+
     for (const sucursal of window.DATOS_API.sucursales) {
 
         if (sucursal.SucursalId == sucursalSigo) {
@@ -178,11 +195,7 @@ function determinarEmailSucursal(sucursalSigo) {
             return sucursal.Email;
         }
 
-        if (sucursalSigo == 54){
-
-            return "sfernandez@alianzafamiliar.mx"
-
-        }
+        
     }
 
 }
@@ -190,6 +203,7 @@ function determinarEmailSucursal(sucursalSigo) {
 function determinarSucursal(sucursalSigo) {
 
     for (const sucursal of window.DATOS_API.sucursales) {
+
 
         if (sucursal.SucursalId == sucursalSigo) {
 
