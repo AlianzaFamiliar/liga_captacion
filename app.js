@@ -30,18 +30,43 @@ function mostrarSucursales() {
     let contadorSucursales = 0;
     sucursal.innerHTML = `<option value="0" selected disabled>Seleccione una opción</option>`;
 
+    if (estadoElegido == 9 || estadoElegido == 15 ) {
+    
+        sucursal.innerHTML += `<option value = "54">Sucursal Mexico - Matriz</option>`
+        contadorSucursales = contadorSucursales + 1;
+    }
+
+    
+
     if (tipoCredito == 3 || tipoCredito == 6) {
 
-        sucursal.innerHTML += `<option value = "54">Sucursal Mexico - Matriz</option>`
+        if (contadorSucursales == 0) {
 
+            sucursal.innerHTML += `<option value = "54">Sucursal Mexico - Matriz</option>`
+        
+        }
+        
     } else {
 
         for (const optionesSucursal of window.DATOS_API.sucursales.filter(item => item.sucursal.includes("Sucursal"))) {
 
             if (estadoElegido == optionesSucursal.EstadoId){
-    
-                sucursal.innerHTML += `<option value = "${optionesSucursal.SucursalId}">${optionesSucursal.sucursal}</option>`
-                contadorSucursales ++;
+
+                if (estadoElegido == 9 && (optionesSucursal.sucursal == "Sucursal Tlanepantla" || optionesSucursal.sucursal == "Sucursal Toluca")){
+
+
+                } else if (estadoElegido == 15 && (optionesSucursal.sucursal == "Sucursal Iztapalapa" || optionesSucursal.sucursal == "Sucursal Gustavo A. Madero")) {
+
+
+                } else {
+
+                    sucursal.innerHTML += `<option value = "${optionesSucursal.SucursalId}">${optionesSucursal.sucursal}</option>`
+                    contadorSucursales ++;
+
+                }
+        
+                    
+                    
             }
         }
     
@@ -50,6 +75,7 @@ function mostrarSucursales() {
             sucursal.innerHTML += `<option value = "54">Sucursal Mexico - Matriz</option>`
     
         }
+
     }
 }
 
