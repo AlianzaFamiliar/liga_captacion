@@ -10,44 +10,36 @@
 <body>
     
     <header class="header">
-
-        <img src="/Assets/AFA logotipo-05.png" alt="Alianza Familiar Entidad Financiera" class="img__header">
-        <h1>Formulario Registro</h1>
-        <img src="/Assets/fovissste_blanco-01.png" alt="Logo Fovissste" class="img__header">
+        <div class="logos__container">
+            <img src="/Assets/Recurso 2-8-1.png" alt="Alianza Familiar Entidad Financiera" class="img__alianza">
+            <img src="/Assets/Recurso 4-8-1.png" alt="Logo Fovissste" class="img__header">
+            <img src="/Assets/infonavit_blanco-01.png" alt="" class="img__header">
+            <img src="/Assets/Recurso 6-8-1.png" alt="" class="img__header">
+        </div>
+        
 
     </header>
 
     <main class="main">
 
+        <h1 class="title__form">Ingresa tus datos para recibir asesoría personalizada <span>¡sin costo!</span></h1>
         <div class="container__formulario">
 
-            <div class="header__formulario">
-
-                <img class="img__header__formulario" src="/Assets/alianza entidad.png" alt="Logo Alianza Familiar">
-                <img class="img__header__formulario" src="/Assets/logo-fovissste.png" alt="Logo Fovissste">
-
-            </div>
-
-            <div class="titulo__formulario">
-                <h2 id="titulo__formulario">Alianza Familiar Entidad Financiera</h2>
-            </div>
-            
-
             <form action="" id="formulario_captacion">
-
-                <label for="nombre">Nombre Completo</label>
+                <h1 class="title__form_2">Ingresa tus datos para recibir asesoría personalizada  <br><span>¡sin costo!</span></h1>
+                <label for="nombre" class="title__input_form">Nombre Completo</label>
                 <input type="text" class="input__formulario" name="nombre" id="nombre" placeholder="Ingrese su nombre" oninput="this.value = this.value.toUpperCase()" required>
     
-                <label for="correo">Correo Electrónico</label>
+                <label for="correo" class="title__input_form">Correo Electrónico</label>
                 <input type="text" class="input__formulario" name="correo" id="correo" placeholder="Ingrese su correo electrónico" oninput="this.value = this.value.toLowerCase()" required>
     
-                <label for="curp">Curp (Opcional)</label>
+                <label for="curp" class="title__input_form">Curp (Opcional)</label>
                 <input type="text" class="input__formulario" name="curp" id="curp"placeholder = "Ingrese su curp" oninput="this.value = this.value.toUpperCase()">
     
-                <label for="telefono">Teléfono Móvil</label>
+                <label for="telefono" class="title__input_form">Teléfono Móvil</label>
                 <input type="number" class="input__formulario" name="telefono" id="telefono" placeholder="Ingrese su número de teléfono" required>
                 
-                <label for="tipo__credito">Tipo de Crédito</label>
+                <label for="tipo__credito" class="title__input_form">Tipo de Crédito</label>
                 <select name="tipo__credito" class="input__formulario" id="tipo__credito" onchange="mostrarModalidad(this); mostrarSucursales();">
                     <option value="0" selected disabled>Seleccione una opción</option>
                     <option value="2">Fovissste - adquisición</option>
@@ -57,29 +49,29 @@
                     <option value="6">BANCOS</option>
                 </select>
                 
-                <label for="modalidad">Modalidad</label>
+                <label for="modalidad" class="title__input_form">Modalidad</label>
                 <select name="modalidad" class="input__formulario" id="modalidad">
                     <option value="0" selected disabled>Seleccione una opción</option>
                 </select>
     
-                <label for="estado">Estado</label>
+                <label for="estado" class="title__input_form">Estado</label>
                 <select name="estado" class="input__formulario" id="estado" onchange="mostrarSucursales()">
                     <option value="0" selected disabled>Seleccione una opción</option>
                 </select>
 
-                <label for="sucursal">Sucursal</label>
+                <label for="sucursal" class="title__input_form">Sucursal</label>
                 <select name="sucursal" class="input__formulario" id="sucursal">
                     <option value="0" selected disabled>Seleccione una opción</option>
                 </select>
 
-                <label for="modo__contacto">¿Por qué medio se enteró de nosotros?</label>
+                <label for="modo__contacto" class="title__input_form">¿Por qué medio se enteró de nosotros?</label>
                 <select name="modo__contacto" class="input__formulario" id="modo__contacto">
                     <option value="0" selected disabled>Seleccione una opción</option>
                 </select>
                 
                 <div>
                     <input type="checkbox" name="confirma-respuesta" required>
-                    <label for="confirma-respuesta">Acepto los <a href="https://registro.alianzafamiliar.mx/terminosCondiciones.html" target="_blank">términos y condiciones</a> de la política de protección de datos.</label>
+                    <label for="confirma-respuesta" class="title__input_form">Acepto los <a href="https://registro.alianzafamiliar.mx/terminosCondiciones.html" target="_blank">términos y condiciones</a> de la política de protección de datos.</label>
                 </div>
 
                 <div class="container__btn">
@@ -90,6 +82,8 @@
             </form>
 
         </div>
+
+        <p>No. REGISTRO CONDUSEF 691482 </p>
         
 
     </main>
@@ -98,12 +92,9 @@
 
         <div class="container-logos-organismos">
 
-            <img src="/Assets/fovissste_blanco-01.png" alt="Fovissste" class="img-organismos">
-            <img src="/Assets/infonavit_blanco-01.png" alt="Infonavit" class="img-organismos">
-            <img src="/Assets/bancario-01.png" alt="Credito Hipotecario" class="img-organismos">
-            <img src="/Assets/hipotecaria_blanco-01.png" alt="Asociación brokers" class="img-organismos">
-            <img src="/Assets/cnbv_blanco-01.png" alt="Comisión Nacional Bancaria" class="img-organismos">
-            <img src="/Assets/condusef-01.png" alt="Condusef" class="img-organismos">
+            <img src="/Assets/Recurso 8-8-1.png" alt="Asociación brokers" class="img-organismos">
+            <img src="/Assets/Recurso 9-8-1.png" alt="Comisión Nacional Bancaria" class="img-organismos">
+            <img src="/Assets/Recurso 10-8-1.png" alt="Condusef" class="img-organismos">
 
         </div>
 

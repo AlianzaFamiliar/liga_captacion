@@ -8,7 +8,6 @@ async function obtenerDatos(URL_API) {
     mostrarTiposContacto(data.body);
 
     return (data.body)
-
 }
 
 function mostrarEstados(body) {
@@ -36,14 +35,11 @@ function mostrarSucursales() {
         contadorSucursales = contadorSucursales + 1;
     }
 
-    
-
     if (tipoCredito == 3 || tipoCredito == 6) {
 
         if (contadorSucursales == 0) {
 
             sucursal.innerHTML += `<option value = "54">Sucursal Mexico - Matriz</option>`
-        
         }
         
     } else {
@@ -62,11 +58,7 @@ function mostrarSucursales() {
 
                     sucursal.innerHTML += `<option value = "${optionesSucursal.SucursalId}">${optionesSucursal.sucursal}</option>`
                     contadorSucursales ++;
-
-                }
-        
-                    
-                    
+                }       
             }
         }
     
@@ -75,7 +67,6 @@ function mostrarSucursales() {
             sucursal.innerHTML += `<option value = "54">Sucursal Mexico - Matriz</option>`
     
         }
-
     }
 }
 
@@ -85,10 +76,8 @@ function mostrarTiposContacto(body) {
 
     for (const modoContactoOption of body.tipos_contacto) {
 
-        modoContacto.innerHTML += `<option value = "${modoContactoOption.ContactoTipoId}">${modoContactoOption.ContactoTipo}</option>`
-        
+        modoContacto.innerHTML += `<option value = "${modoContactoOption.ContactoTipoId}">${modoContactoOption.ContactoTipo}</option>`   
     }
-
 }
 
 const URL_API = "https://4dki0v452m.execute-api.us-east-2.amazonaws.com/Pruebas"

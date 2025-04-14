@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+
+    --color_verde: #007680;
+    --color_amarillo: #F89c24;
+    --color_gris: #f4f4f4;
+
+}
+
 * {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     margin: 0;
+    font-size: 16px;
 }
 
 body {
@@ -19,12 +28,22 @@ body {
 .header {
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #00757F;
     height: 100px;
     color: white;
     padding: 0 30px 0 20px;
+
+}
+
+.logos__container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
 
 }
 
@@ -37,19 +56,27 @@ body {
 
 .img__header {
 
-    height: 50px;
+    height: 35px;
+    width: auto;
+    flex-basis: auto;
+}
+
+.img__alianza {
+
+    width: 150px;
 
 }
 
 .main {
 
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
 
@@ -59,28 +86,52 @@ body {
 
 }
 
-
-
 .container__formulario {
 
+    margin-top: 20px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    height: 860px;
-    width: 400px;
-    justify-content: center;
+    height: 717px;
+    width: 646px;
     padding: 40px;
-    border-radius: 20px;
-    border: 1px solid black;
+    border-radius: 40px;
+    border: 5px solid var(--color_amarillo);
     gap: 20px;
 
 }
 
-.titulo__formulario {
 
+
+
+.title__form{
+
+    color: var(--color_verde);
+    font-size: 19px;
+
+}
+
+.title__form_2 {
+
+    color: var(--color_verde);
+    font-size: 19px;
     text-align: center;
-    width: 100%;
-    padding-bottom: 20px;
+    display: none;
+
+}
+
+.title__form span, .title__form_2 span {
+
+    font-weight: 800;
+    font-size: 19px;
+
+}
+
+.main p {
+
+    color: var(--color_verde);
 
 }
 
@@ -88,8 +139,18 @@ body {
 
     max-height: 30px;
     border-radius: 5px;
-    border: solid 1px;
+    border: none;
+    background-color: var(--color_gris);
+    color: var(--color_verde);
+    border-radius: 40px;
     padding: 5px;
+}
+
+.title__input_form {
+
+    color: var(--color_verde);
+    font-weight: 500;
+
 }
 
 .container__btn {
@@ -127,7 +188,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 400px;
+    width: 90%;
     gap: 10px;
 
 }
@@ -135,8 +196,21 @@ body {
 #btn-enviar {
 
     margin-top: 20px;
-    width: 100px;
+    border: 3px solid var(--color_verde);
+    width: 130px;
     padding: 10px;
+    color: var(--color_verde);
+    font-weight: 700;
+    border-radius: 40px;
+    background-color: transparent;
+
+}
+
+#btn-enviar:hover {
+
+    cursor: pointer;
+    background-color: var(--color_verde);
+    color: white;
 
 }
 
@@ -168,7 +242,38 @@ body {
 
 }
 
+@media (max-width: 780px){
+
+    .container__formulario {
+
+        width: 420px;
+        height: 864;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .input__formulario{
+
+        width: 95%;
+
+    }
+    
+}
+
 @media (max-width: 550px) {
+
+    .title__form {
+
+        display: none;
+
+    }
+
+    .title__form_2 {
+
+        display: inline-block;
+
+    }
 
     .img-organismos {
 
@@ -190,8 +295,10 @@ body {
 
     .container__formulario {
 
-        width: 300px;
-        padding: 40px;
+        width: 360px;
+        margin-top: 0px;
+        height: 794px;
+        padding: 20px 40px 40px 40px;
         justify-content: center;
         align-items: center;
 
@@ -240,10 +347,27 @@ body {
 
     .container__formulario {
 
-        width: 240px;
-        padding: 40px;
+        width: 360px;
+        height: 845px;
         justify-content: center;
-        align-items: center;
+        align-items: start;
+        padding: 15px 10px 15px 10px;
+
+    }
+}
+
+@media (max-width: 390px) {
+
+    .logos__container {
+
+        gap: 10px;
+
+    }
+
+    .container__formulario {
+
+        width: 320px;
+        height: 830px;
 
     }
 }
