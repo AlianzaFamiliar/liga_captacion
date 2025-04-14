@@ -103,11 +103,7 @@ formCaptacion.addEventListener("submit", function (e) {
     } else {
 
         btnEnviar.disabled = false;
-
     }
-    
-    
-
 });
 
 function validarDatos(datosApi) {
